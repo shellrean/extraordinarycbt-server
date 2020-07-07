@@ -14,51 +14,51 @@
             			<div class="form-group">
             				<label>Data 1</label>
             				<b-progress :value="identify.peserta == 1 ? 100 : peserta.progress" variant="info" animated show-progress class="mt-2"></b-progress>
-            				<small v-show="identify.peserta ? 0 : peserta.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.peserta ? 0 : peserta.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
-            				<small v-show="identify.peserta ? 1 : peserta.step == 3">Complete</small>
+            				<small v-show="identify.peserta == 0 && peserta.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.peserta == 0 && peserta.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
+            				<small v-show="identify.peserta == 1 || peserta.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 2</label>
             				<b-progress :value="identify.matpel == 1 ? 100 : matpel.progress" variant="info" animated show-progress class="mt-2"></b-progress>
-            				<small v-show="identify.matpel ? 0 : matpel.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.matpel ? 0 : matpel.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
-            				<small v-show="identify.matpel ? 1 : matpel.step == 3">Complete</small>
+            				<small v-show="identify.matpel == 0 && matpel.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.matpel == 0 && matpel.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
+            				<small v-show="identify.matpel == 1 || matpel.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 3</label>
             				<b-progress :value="identify.banksoal == 1 ? 100 : banksoal.progress" variant="info" animated show-progress class="mt-2"></b-progress>
-            				<small v-show="identify.banksoal ? 0 : banksoal.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.banksoal ? 0 : banksoal.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
-            				<small v-show="identify.banksoal ? 1 : banksoal.step == 3">Complete</small>
+            				<small v-show="identify.banksoal == 0 && banksoal.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.banksoal == 0 && banksoal.step == 2">Step 2 of 2- Memasukkan adata ke database</small>
+            				<small v-show="identify.banksoal == 1 || banksoal.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 4</label>
             				<b-progress :value="identify.soal == 1 ? 100 : soal.progress" variant="info" animated show-progress  class="mt-2"></b-progress>
-            				<small v-show="identify.soal ? 0 : soal.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.soal ? 0 : soal.step == 2">Step 2 of 2- Memasukkan data ke database</small>
-            				<small v-show="identify.soal ? 1 : soal.step == 3">Complete</small>
+            				<small v-show="identify.soal == 0 && soal.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.soal == 0 && soal.step == 2">Step 2 of 2- Memasukkan data ke database</small>
+            				<small v-show="identify.soal == 1 || soal.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 5</label>
             				<b-progress :value="identify.pilihan_soal == 1 ? 100 : jawaban.progress" variant="info" animated show-progress  class="mt-2"></b-progress>
-            				<small v-show="identify.pilihan_soal ? 0 : jawaban.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.pilihan_soal ? 0 : jawaban.step == 2">Step 2 of 2- Memasukkan data ke database</small>
-            				<small v-show="identify.pilihan_soal ? 1 : jawaban.step == 3">Complete</small>
+            				<small v-show="identify.pilihan_soal == 0 && jawaban.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.pilihan_soal == 0 && jawaban.step == 2">Step 2 of 2- Memasukkan data ke database</small>
+            				<small v-show="identify.pilihan_soal == 1 || jawaban.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 6</label>
             				<b-progress :value="identify.gambar == 1 ? 100 : gambar.progress" variant="info" animated show-progress  class="mt-2"></b-progress>
-            				<small v-show="identify.gambar ? 0 : gambar.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.gambar ? 0 : gambar.step == 2">Step 2 of 2- Download file memasukkan data ke directory</small>
-            				<small v-show="identify.gambar ? 1 : gambar.step == 3">Complete</small>
+            				<small v-show="identify.gambar == 0 && gambar.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.gambar == 0 && gambar.step == 2">Step 2 of 2- Download file memasukkan data ke directory</small>
+            				<small v-show="identify.gambar == 1 || gambar.step == 3">Complete</small>
             			</div>
             			<div class="form-group">
             				<label>Data 7</label>
             				<b-progress :value="identify.jadwal == 1 ? 100 : jadwal.progress" variant="info" animated show-progress  class="mt-2"></b-progress>
-            				<small v-show="identify.jadwal ? 0 : jadwal.step == 1">Step 1 of 2- Download data dari pusat</small>
-            				<small v-show="identify.jadwal ? 0 : jadwal.step == 2">Step 2 of 2- Memasukkan data ke database</small>
-            				<small v-show="identify.jadwal ? 1 : jadwal.step == 3">Complete</small>
+            				<small v-show="identify.jadwal == 0 && jadwal.step == 1">Step 1 of 2- Download data dari pusat</small>
+            				<small v-show="identify.jadwal == 0 && jadwal.step == 2">Step 2 of 2- Memasukkan data ke database</small>
+            				<small v-show="identify.jadwal == 1 || jadwal.step == 3">Complete</small>
             			</div>
             		</div>
             		<div class="card-footer"></div>
@@ -77,43 +77,43 @@
 		    			<td><b>Data 1</b></td>
 		    			<td v-text="center.peserta"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.peserta : 0 }}</td>
+		    			<td>{{ count.peserta }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 2</b></td>
 		    			<td v-text="center.matpel"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.matpel : 0 }}</td>
+		    			<td>{{ count.matpel }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 3</b></td>
 		    			<td v-text="center.banksoal"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.banksoal : 0 }}</td>
+		    			<td>{{ count.banksoal }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 4</b></td>
 		    			<td v-text="center.soal"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.soal : 0 }}</td>
+		    			<td>{{ count.soal }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 5</b></td>
 		    			<td v-text="center.jawaban_soal"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.jawaban_soal : 0 }}</td>
+		    			<td>{{ count.jawaban_soal }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 6</b></td>
 		    			<td v-text="center.gambar"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.gambar : 0 }}</td>
+		    			<td>{{ count.gambar }}</td>
 		    		</tr>
 		    		<tr>
 		    			<td><b>Data 7</b></td>
 		    			<td v-text="center.jadwal"></td>
 		    			<td>-</td>
-		    			<td>{{ count ? count.jadwal : 0 }}</td>
+		    			<td>{{ count.jadwal }}</td>
 		    		</tr>
 		    	</table>
 		    </template>
@@ -151,7 +151,7 @@ export default {
 			jawaban: state => state.jawaban,
 			gambar: state => state.gambar,
 			jadwal: state => state.jadwal,
-			count: state => state.countData.data,
+			count: state => state.countData,
 			identify: state => state.identify,
 		})
 	},

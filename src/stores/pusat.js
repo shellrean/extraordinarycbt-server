@@ -131,6 +131,9 @@ const actions = {
 				commit('SIGN_SERVER_IDENTITITY', response.data.data) 
 				resolve(response.data)
 			})
+			.catch((error) => {
+				reject(error.response.data)
+			})
 		})
 	},
 	getServerConnect({ commit }, payload) {
